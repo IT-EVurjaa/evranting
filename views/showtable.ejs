@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IOT DATA: EV-URJAA</title>
+
+  <style>
+    table, th, td {
+    border: 2px solid black;
+
+  </style>
+
+</head>
+<body>
+
+	<h1>IOT DATA: EV-URJAA  </h1>
+	
+	<br>
+    <br>	
+<table style="width: 95%;">
+  <tr>
+    <th>S No.</th>
+    <th>BatteryId</th>
+    <th>Location(lat)</th>
+    <th>Location(long)</th>
+    <th>NetworkStatus</th>
+    <th>socper</th>
+    <th>Time</th>
+    <th>current</th>
+    <th>Voltage(in Volt)</th> 
+    <th>Highcelltemp</th>
+    <th>IotMode</th>
+    <th>LoadStatus</th>
+    <th>Cycles</th>
+
+
+  </tr>
+  <%for(i=0;i<data.length;i++){%>
+  <tr>
+    <td><%= (i+1) %></td>
+    <td><%= data[i].batteryId %></td>
+    <td><%= data[i].LocationLAT %></td>
+    <td><%= data[i].LocationLONG %> %></td>
+    <td><%= data[i].NetworkStatus %></td>
+    <td><%= data[i].socper %></td>
+    <td><%= data[i].time %></td>
+    <td><%= data[i].current %></td>
+    <td><%= data[i].voltage %></td>
+    <td><%= data[i].Hightemp %></td>
+    <td><%= data[i].IotMode %></td>
+    <td><%= data[i].LoadStatus %></td>
+    <td><%= data[i].Cycles %></td>
+   
+  </tr>
+  <%}%>
+</table>
+	</div>
+
+</body>
+</html>
