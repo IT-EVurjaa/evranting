@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>driver control page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <style>
+        h1{
+            text-align: center;
+        }
+        .box{
+            height: 10%;
+            background-color: powderblue;
+            text-align: center;
+        }
+        .section{
+            border: 1px solid black;
+        }
+
+    </style>
+  </head>
+  <body>
+<div class="section"></div>
+    <h1>Charging ON/OFF section</h1>
+    
+    <div class="box">
+
+    <button onclick="document.getElementById('myImage').src='/image/on.png'">ON</button>
+
+    <img id="myImage" src="/image/on.png" alt="" srcset="" style="width: 100px">
+
+    <button onclick="document.getElementById('myImage').src='/image/off.png'">OFF</button>
+    </div>
+</div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+<div class="section"></div>
+
+    <h1>DisCharging ON/OFF section</h1>
+    
+    <div class="box">
+
+    <button onclick="SwitchONOff(1)">ON</button>
+
+    <img id="myImage1" src="/image/on.png" alt="" srcset="" style="width: 100px">
+
+    <button onclick="SwitchONOff(0)">OFF</button>
+    </div>
+
+
+
+
+    <script>
+        async function SwitchONOff(val){
+          console.log(val)
+          var settings = {
+          method: 'POST',
+          headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+             
+              'turnOnOff' : val
+          })
+
+          };
+          const res = await fetch('/users/turnOnoff',settings);
+         
+      }
+      </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+<!-- onclick="document.getElementById('myImage1').src='/image/on.png'"
+onclick="document.getElementById('myImage1').src='/image/off.png'" -->
