@@ -5,7 +5,11 @@ var usermodel= require('../model/usermodel')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.render('index');
+});
+
+router.get('/battery', function(req, res, next) {
+  res.render('battery');
 });
 
 router.get('/onof', function(req, res, next) {
