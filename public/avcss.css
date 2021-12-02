@@ -5,3 +5,10 @@
     text-align: center;
     
 }
+
+.addBatterySection{
+    border: 2px solid cornsilk;
+    background-color: white;
+    margin: 2%;
+    padding: 2%;
+}

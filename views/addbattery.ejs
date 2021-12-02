@@ -1,0 +1,105 @@
+<% include header %>
+<% if(typeof alert != 'undefined') { %>
+    <% alert.forEach(function(error) { %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <%= error.msg %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+    <% }) %>
+  <% } %>
+
+<!--  add battery page  code start -->
+                  <div class="batteryTopBar">
+                     <div class="addsection">
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn btn-outline-info" onclick="hiddnefuntion()"> <i class="fas fa-plus-circle"></i> Add Battery</button>
+                      </div>
+                    </div>
+
+                  </div>
+                  <hr>
+                  <div class="addBatterySection " id="hideDIV">
+                    <h5 class="ml-2 mt-2 text-primary">&nbsp <i class="fas fa-plus-circle"></i> &nbsp Add Battery</h5> 
+                    
+                    <form class="row g-3" method="post"   action="/users/addbateryform"> 
+
+                        <div class="col-md-6">
+                          <label for="batteryId" class="form-label">Battery ID</label> 
+                          <input type="text" class="form-control" id="batteryId" name="batteryId">
+                        </div>
+                        <div class="col-md-6">
+                          <label for="iotdevice" class="form-label">IOT Device ID</label> 
+                          <input type="password" class="form-control" id="iotdevice" name="iotdevice">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="imei" class="form-label">IMEI</label> 
+                            <input type="text" class="form-control" id="imei" name="imei">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="invoice" class="form-label">Invoice</label> 
+                            <input type="text" class="form-control" id="invoice" name="invoice">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="lifecycle" class="form-label">LifeCycle</label> 
+                            <input type="password" class="form-control" id="lifecycle" name="lifecycle">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="purchasedate" class="form-label">Purchase Date</label> 
+                            <input type="date" class="form-control" id="purchasedate" name="purchasedate">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="warrentydate" class="form-label">Warrenty Date</label> 
+                            <input type="date" class="form-control" id="warrentydate" name="warrentydate">
+                          </div>
+                         
+                        <div class="col-12">
+                          <label for="batterymanufature" class="form-label">Battery Manufacturer</label> 
+                          <input type="text" class="form-control" id="batterymanufature" placeholder="" name="batterymanufature">
+                        </div>
+                        
+                       
+                        <div class="position-relative "><label  class="col-md-6">Datasheet Image<input name="DS_img"  type="file" class="form-control-file mt-1"></label><label  class="col-md-6">CAN Datasheet Image<input name="CDS_img"  type="file" class="form-control-file mt-1"></label></div>
+                        <div class="position-relative "><label  class="col-md-6">Purchase Order (Bill) Image<input name="purchase_img"  type="file" class="form-control-file mt-1"></label></div>
+                       
+                        <div class="col-12">
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                       
+                      </form>
+                     
+                  </div>
+
+                  <!--  add battery page  code end -->
+
+
+                  <div class="batteryMiddleBar">
+                        <section class="middle">
+                            Show Battery Page
+                        </section>
+                        
+                  </div>
+
+
+
+                   
+
+
+                  <script>
+
+                    async function addbattery(){
+                    var reqData = new FormData(document.getElementById("addbatteryform"));
+                    console.log(reqData);
+                  }
+
+
+                    function hiddnefuntion(){
+                      var x=document.getElementById("hideDIV");
+                      if (x.style.display ==="none"){
+                        x.style.display ="block";
+                      }
+                      else{
+                        x.style.display="none"
+                      }
+                    }
+                  </script>
+                  

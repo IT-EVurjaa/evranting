@@ -7,6 +7,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
+});
+
+
+
 
 //api for get json of last 100 data of candata
 router.get('/showdata',function(req,res){
