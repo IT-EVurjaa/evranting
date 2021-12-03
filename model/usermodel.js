@@ -37,10 +37,50 @@ async function insertbatterdata(data ,cb){
 
 
 
+async function insertDriverData(data ,cb){
+
+    var dt={
+    'PoiletAadharNumber':data.PoiletAadharNumber,
+    'PoiletName':data.PoiletName,
+    'DrivingLicenseNumber':data.DrivingLicenseNumber,
+    'VehicleRegistrationNumber':data.VehicleRegistrationNumber,
+    'HouseNo':data.HouseNo,
+    'Landmark':data.Landmark,
+    'Area':data.Area,
+    'City':data.City,
+    'Pincode':data.Pincode,
+    'gender':data.gender,
+    'profile_img':data.profile_img,
+    'vehicle_img':data.vehicle_img,
+    'AC_img':data.AC_img,
+    'DL_img':data.DL_img,
+    'VR_img':data.VR_img,
+    'AP_img':data.AP_img,
+    'VI_img':data.VI_img,
+    'cheque_img':data.cheque_img,
+    'PB_img':data.PB_img,
+    'mobile':data.mobile,
+    'secMobile':data.secMobile,
+
+}
+
+    DbName="EVRanting";
+    db.useDb(DbName).collection('drivertable').insertOne(dt,function(err,res){
+        if(err){
+            throw err
+        }
+        else{
+            cb(1)
+        }
+    })
+}
 
 
 
 
 
 
-module.exports ={ turnOnOffcharging,insertbatterdata}
+
+
+
+module.exports ={ turnOnOffcharging,insertbatterdata,insertDriverData}

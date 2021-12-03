@@ -15,7 +15,7 @@ function convert_data(data,cb){
         show_Ns="Poor"
     }
     else{
-        show_Ns="Wroung input"
+        show_Ns="Wrong input"
     }
     data.NetworkStatus=show_Ns
 

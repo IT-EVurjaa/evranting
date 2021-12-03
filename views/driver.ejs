@@ -30,43 +30,64 @@
                       </div>
                       <% } %>
                         <div class="col-md-6">
-                          <label for="batteryId" class="form-label">Poilet Aadhar number</label> 
-                          <input type="text" class="form-control" id="batteryId" name="batteryId">
+                          <label for="PoiletAadharNumber" class="form-label">Poilet Aadhar number</label> 
+                          <input type="number" class="form-control" id="PoiletAadharNumber" name="PoiletAadharNumber">
                         </div>
                         <div class="col-md-6">
-                          <label for="iotdevice" class="form-label">poilet Name</label> 
-                          <input type="password" class="form-control" id="iotdevice" name="iotdevice">
+                          <label for="PoiletName" class="form-label">poilet Name</label> 
+                          <input type="password" class="form-control" id="PoiletName" name="PoiletName">
                         </div>
                         <div class="col-md-6">
-                            <label for="imei" class="form-label">Driving License Number</label> 
-                            <input type="text" class="form-control" id="imei" name="imei">
+                            <label for="DrivingLicenseNumber" class="form-label">Driving License Number</label> 
+                            <input type="text" class="form-control" id="DrivingLicenseNumber" name="DrivingLicenseNumber">
                           </div>
                           <div class="col-md-6">
-                            <label for="invoice" class="form-label">Vehicle Registration Number</label> 
-                            <input type="text" class="form-control" id="invoice" name="invoice">
+                            <label for="VehicleRegistrationNumber" class="form-label">Vehicle Registration Number</label> 
+                            <input type="text" class="form-control" id="VehicleRegistrationNumber" name="VehicleRegistrationNumber">
+                          </div>
+                          <div class="col-md-12">
+                            <h4 style="color: #3f6ad8">Address</h4>
                           </div>
                           <div class="col-md-6">
-                            <label for="lifecycle" class="form-label">LifeCycle</label> 
-                            <input type="password" class="form-control" id="lifecycle" name="lifecycle">
+                            <label for="HouseNo" class="form-label">Street& House No</label> 
+                            <input type="password" class="form-control" id="HouseNo" name="HouseNo">
                           </div>
                           <div class="col-md-6">
-                            <label for="purchasedate" class="form-label">Purchase Date</label> 
-                            <input type="date" class="form-control" id="purchasedate" name="purchasedate">
+                            <label for="Landmark" class="form-label">Landmark</label> 
+                            <input type="password" class="form-control" id="Landmark" name="Landmark">
                           </div>
                           <div class="col-md-6">
-                            <label for="warrentydate" class="form-label">Warrenty Date</label> 
-                            <input type="date" class="form-control" id="warrentydate" name="warrentydate">
+                            <label for="Area" class="form-label">Area</label> 
+                            <input type="password" class="form-control" id="Area" name="Area">
                           </div>
-                         
-                        <div class="col-12">
-                          <label for="batterymanufature" class="form-label">Battery Manufacturer</label> 
-                          <input type="text" class="form-control" id="batterymanufature" placeholder="" name="batterymanufature">
-                        </div>
-                        
-                       
-                        <div class="position-relative "><label  class="col-md-6">Datasheet Image<input name="DS_img"  type="file" class="form-control-file mt-1"></label><label  class="col-md-6">CAN Datasheet Image<input name="CDS_img"  type="file" class="form-control-file mt-1"></label></div>
-                        <div class="position-relative "><label  class="col-md-6">Purchase Order (Bill) Image<input name="purchase_img"  type="file" class="form-control-file mt-1"></label></div>
-                       
+                          <div class="col-md-6">
+                            <label for="City" class="form-label">City</label> 
+                            <input type="password" class="form-control" id="City" name="City">
+                          </div>
+                          <div class="col-md-6">
+                            <label for="Pincode" class="form-label">Pincode</label> 
+                            <input type="number" class="form-control" id="Pincode" name="Pincode">
+                          </div>
+                          <div class="position-relative "><label  class="col-md-6" >Gender <br>
+                            <input type="radio" id="male" name="gender" value="male" class="mt-1 ml-2">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female" class="mt-1">
+                            <label for="female">Female</label>
+                            <input type="radio" id="other" name="gender" value="other" class="mt-1">
+                            <label for="other">Other</label>
+                            </label>
+                            <div class="col-md-6">
+                              <label for="DOB" class="form-label">Date Of Birth</label> 
+                              <input type="date" class="form-control" id="DOB" name="DOB">
+                            </div>
+                            <br>
+                            <div class="position-relative "><label  class="col-md-6">Profile Image<input name="profile_img" name="profile_img" accept="image/jpg" type="file" class="form-control-file mt-1"></label><label  class="col-md-6">Vehicle Image<input name="vehicle_img"  type="file" class="form-control-file mt-1"></label></div>
+                            <div class="position-relative "><label  class="col-md-6">Aadhar Card Image<input name="AC_img"  type="file" class="form-control-file mt-1"></label><label  class="col-md-6">Driving License Image<input name="DL_img"  type="file" class="form-control-file mt-1"></label></div>
+                            <div class="position-relative "><label  class="col-md-6">Vehicle Ragistration Image<input name="VR_img"  type="file" class="form-control-file mt-1"></label><label  class="col-md-6">Address proof Image<input name="AP_img"  type="file" class="form-control-file mt-1"></label></div>
+                            <div class="position-relative "><label  class="col-md-6">Vehicle Insurance Image<input name="VI_img"  type="file" class="form-control-file mt-1"></label><label  class="col-md-6">Cheque Image<input name="cheque_img"  type="file" class="form-control-file mt-1"></label></div>
+                            <div class="position-relative "><label  class="col-md-6">Passbook Image<input name="PB_img"  type="file" class="form-control-file mt-1"></label></div>
+                            <div class="position-relative "><label  class="col-md-6">Mobile<input name="mobile"   type="text" class="form-control mt-1"></label><label  class="col-md-6">Secondary Mobile Number<input name="secMobile"   type="text" class="form-control mt-1"></label></div>
+                           
                         <div class="col-12">
                           <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
